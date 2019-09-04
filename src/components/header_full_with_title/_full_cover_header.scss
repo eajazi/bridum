@@ -1,0 +1,50 @@
+.cover-full {
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  padding-top: 30vh;
+  padding-bottom: 30vh;
+  height: 100vh;
+  width: 100%;
+
+  &::after {
+    background-color: $white;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+  }
+
+  .cover-full-content {
+    h4 {
+      font-size: 1.1rem;
+      letter-spacing: 1rem;
+      margin-left: 0.4rem;
+    }
+
+    h1 {
+      font-size: 3rem;
+      text-transform: uppercase;
+    }
+
+    hr {
+      margin-left: 50%;
+    }
+
+    // small devices
+    @media (min-width: $screen-md-min) {
+      h4 {
+        font-size: 1.5rem;
+      }
+
+      h1 {
+        font-size: 6.5rem;
+      }
+    }
+  }
+}

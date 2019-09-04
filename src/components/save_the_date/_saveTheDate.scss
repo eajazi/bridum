@@ -1,0 +1,77 @@
+// full page container
+.full-page-container {
+  background: url(../../assets/covers/second_cover.jpg) left center no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+  width: 100%;
+
+  &::after {
+    background: url(../../assets/covers/cover_overlay.svg) left center no-repeat;
+    background-color: $white;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    opacity: 0.7;
+  }
+
+  .full-page-container-image {
+    height: 45vh;
+    width: 100%;
+    background: url(../../assets/wedding_jar.svg) center no-repeat;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+    letter-spacing: 0.5rem;
+    margin-top: 20vw;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 4rem;
+    text-align: center;
+  }
+
+  h5 {
+    font-size: 1.2rem;
+    letter-spacing: 0.5em;
+    text-align: start;
+    margin-top: 0.3rem;
+  }
+
+  hr {
+    margin-left: 15px;
+    border: 0.5px solid #212121;
+  }
+
+  .button-container {
+    margin-top: 30px;
+  }
+
+  // large devices
+  @media (min-width: $screen-lg-min) {
+    .full-page-container-image {
+      height: 60vh;
+    }
+
+    h4 {
+      margin-top: 350px;
+      font-size: 1.8rem;
+    }
+
+    h1 {
+      font-size: 6em;
+    }
+
+    h5 {
+      font-size: 1.8rem;
+    }
+  }
+}

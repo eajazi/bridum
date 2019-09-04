@@ -1,0 +1,38 @@
+.countdown-container {
+  font-family: $font-family-raleway;
+  text-align: center;
+  padding: 5vh;
+
+  .countdown-single-circle {
+  }
+
+  .countdown-circle-title {
+    padding: 1vh;
+    h5 {
+      font-size: 1.3em;
+
+      @media (max-width: 600px) {
+        font-size: 1em;
+        text-align: center;
+      }
+    }
+  }
+
+  // small devices
+  @media (min-width: $screen-sm-min) {
+  }
+
+  // medium devices
+  @media (min-width: $screen-md-min) {
+    padding-left: 2vh;
+    padding-right: 2vh;
+  }
+
+  // large devices
+  @media (min-width: $screen-lg-min) {
+  }
+
+  // extra large devices
+  @media (min-width: $screen-xl-min) {
+  }
+}

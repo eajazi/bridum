@@ -1,0 +1,96 @@
+.contact-section-root {
+  width: 100%;
+
+  .contact-section-content {
+    padding-top: 5rem;
+    //padding-top: 20vh;
+
+    padding-bottom: 10rem;
+    //padding-bottom: 20vh;
+    p {
+      font-size: 1rem;
+    }
+
+    h4 {
+      font-size: 1.2rem;
+      color: $colorAccent;
+    }
+
+    h2 {
+      text-transform: uppercase;
+      font-size: 4rem;
+      span {
+        color: $colorAccent;
+      }
+    }
+
+    .social-links-warp {
+      padding-top: 2.5rem;
+      padding-bottom: 2.5rem;
+    }
+
+    .social-links {
+      width: 40px;
+      a {
+        font-size: 0.8rem;
+        display: block;
+        margin-bottom: 25px;
+
+        img {
+          @include transition-all;
+          filter: gray; /* IE6-9 */
+          -webkit-filter: grayscale(
+            1
+          ); /* Google Chrome, Safari 6+ & Opera 15+ */
+          filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
+
+          /* Disable grayscale on hover */
+          &:hover() {
+            -webkit-filter: grayscale(0);
+            filter: none;
+          }
+        }
+      }
+    }
+
+    .social-text {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      width: 215px;
+      margin-left: 0.5rem;
+      position: relative;
+      -webkit-transform: rotate(-90deg) translateX(-200px);
+      -ms-transform: rotate(-90deg) translateX(-200px);
+      transform: rotate(-90deg) translateX(-200px);
+      -webkit-transform-origin: top left;
+      -ms-transform-origin: top left;
+      transform-origin: top left;
+      &:after {
+        position: absolute;
+        content: '';
+        width: 70px;
+        height: 2px;
+        right: 0;
+        top: calc(50% - 1px);
+        background: #212121;
+      }
+    }
+
+    .character-icon {
+      position: absolute;
+      height: 220px;
+      bottom: -100px;
+      right: 10px;
+    }
+  }
+
+  // large devices
+  @media (min-width: $screen-lg-min) {
+    padding-top: 5rem;
+    padding-top: 20vh;
+
+    padding-bottom: 10rem;
+    padding-bottom: 20vh;
+  }
+}

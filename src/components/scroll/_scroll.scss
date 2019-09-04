@@ -1,0 +1,96 @@
+// scroll container
+.content-scroll {
+  position: absolute;
+  right: 4rem;
+  right: 14vw;
+  bottom: 5rem;
+  bottom: 10vh;
+
+  a {
+    font-size: 0.8rem;
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: $scroll-color;
+    position: relative;
+    display: inline-block;
+    line-height: 3rem;
+    padding-left: 2.5rem;
+    cursor: pointer;
+
+    &::before {
+      border-bottom: 2px solid $scroll-color;
+      border-right: 2px solid $scroll-color;
+      content: '';
+      display: block;
+      height: 8px;
+      width: 8px;
+      margin-top: -6px;
+      pointer-events: none;
+      position: absolute;
+
+      left: 1rem;
+      left: 10%;
+
+      top: 50%;
+      -webkit-transform-origin: 66% 66%;
+      -ms-transform-origin: 66% 66%;
+      transform-origin: 66% 66%;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+      -webkit-transition: all 0.15s ease-in-out;
+      transition: all 0.15s ease-in-out;
+    }
+
+    &:hover {
+      //text-decoration: none;
+      color: $scroll-color-active;
+    }
+  }
+
+  // small devices
+  @media (min-width: $screen-sm-min) {
+    right: 7rem;
+    bottom: 6rem;
+  }
+}
+
+// scroll line
+.scroll-line {
+  display: block;
+  width: 1px;
+  height: 5rem;
+  height: 15vh;
+  background-color: $scroll-color;
+  position: absolute;
+  right: 3rem;
+  right: 10vw;
+  bottom: 0;
+
+  // small devices
+  @media (min-width: $screen-sm-min) {
+    height: 8rem;
+    right: 5rem;
+  }
+}
+
+// scroll line below
+.scroll-line-below {
+  display: block;
+  width: 2px;
+  width: 1px;
+  height: 5rem;
+  height: 15vh;
+  background-color: $scroll-color;
+  position: absolute;
+  right: 3rem;
+  right: 10vw;
+  top: 0;
+
+  // small devices
+  @media (min-width: $screen-sm-min) {
+    height: 8rem;
+    right: 5rem;
+  }
+}

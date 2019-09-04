@@ -1,0 +1,33 @@
+// Import Bootstrap and its default variables
+@import '~bootstrap/scss/bootstrap.scss';
+
+// custom styling
+@import './setup/variables';
+@import './setup/typography';
+@import './setup/mixins';
+@import './basics/bootstrap-overrides';
+
+@import './basics/global';
+
+// containers
+@import './containers/home';
+@import './containers/about';
+@import './containers/schedule';
+@import './containers/contact';
+
+// components
+@import '../components/app';
+@import '../components/navigation_bar/navbar';
+@import '../components/header/header';
+@import '../components/date_countdown/countdown';
+@import '../components/save_the_date/saveTheDate';
+@import './components/generalbuttons';
+@import '../components/header_full_with_title/full_cover_header';
+@import '../components/scroll/scroll';
+@import '../components/story/story';
+@import '../components/contact_section/contactSection';
+@import '../components/social_icon/social_icon';
+@import '../components/timeline/timeline';
+@import '../components/timeline_section/timelineSection';
+@import '../components/timeline_link/timelineLink';
+@import '../components/completionist/completionist';

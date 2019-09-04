@@ -1,0 +1,192 @@
+.header-container-main {
+  background: url(../../assets/covers/hero_bg.jpg) left center no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+  width: 100%;
+
+  &::after {
+    background: url(../../assets/covers/vertical_overlay.svg) left center
+      no-repeat;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 5rem;
+    width: 50%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.1;
+  }
+
+  &::before {
+    background-color: $white;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.9;
+  }
+
+  // large devices
+  @media (min-width: $screen-md-min) {
+    &::after {
+      opacity: 0.1;
+    }
+
+    &::before {
+      opacity: 0.8;
+    }
+  }
+
+  // large devices
+  @media (min-width: $screen-lg-min) {
+    &::after {
+      left: 35%;
+      opacity: 0.2;
+    }
+
+    &::before {
+      opacity: 0.7;
+    }
+  }
+}
+
+.header-container-content {
+  padding-top: 3rem;
+
+  hr {
+    border: 0;
+  }
+
+  h1 {
+    text-transform: uppercase;
+    text-align: left;
+  }
+
+  h4 {
+    position: absolute;
+    width: 140%;
+    top: 25rem;
+    left: 2rem;
+    font-size: 1.1em;
+    letter-spacing: 0.9em;
+    @include transform(rotate(-90deg));
+    /* Internet Explorer */
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+    transform-origin: center left;
+  }
+
+  // medium devices
+  @media (min-width: $screen-sm-min) {
+    h4 {
+      top: 30rem;
+    }
+  }
+  // medium devices
+  @media (min-width: $screen-md-min) {
+    padding-top: 15rem;
+
+    hr {
+      margin-left: 2rem;
+      border: 0.5px solid #212121;
+    }
+
+    h1 {
+      text-align: end;
+      font-size: 7.5rem;
+      font-size: 13vw;
+    }
+
+    h4 {
+      width: 100%;
+      margin-top: 0.5rem;
+      position: initial;
+      text-align: end;
+      font-size: 1.2rem;
+      letter-spacing: 0.7em;
+      @include transform(rotate(0deg));
+      /* Internet Explorer */
+      filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
+    }
+  }
+
+  // large devices
+  @media (min-width: $screen-lg-min) {
+    h1 {
+      font-size: 7em;
+      text-align: end;
+    }
+
+    h4 {
+      text-align: end;
+      font-size: 1.2rem;
+      letter-spacing: 0.9em;
+    }
+  }
+
+  // extra large devices
+  @media (min-width: $screen-xl-min) {
+    h1 {
+      font-size: 8.4em;
+    }
+
+    hr {
+      margin-left: 2vh;
+    }
+  }
+}
+
+// scroll container
+.home-content__scroll {
+  position: absolute;
+  right: 9.5rem;
+  bottom: 8.4rem;
+  a {
+    font-family: 'montserrat-semibold', sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    color: #ffffff;
+    position: relative;
+    display: inline-block;
+    line-height: 3rem;
+    padding-left: 2.5rem;
+    &::before {
+      border-bottom: 2px solid #39b54a;
+      border-right: 2px solid #39b54a;
+      content: '';
+      display: block;
+      height: 8px;
+      width: 8px;
+      margin-top: -6px;
+      pointer-events: none;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      -webkit-transform-origin: 66% 66%;
+      -ms-transform-origin: 66% 66%;
+      transform-origin: 66% 66%;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+      -webkit-transition: all 0.15s ease-in-out;
+      transition: all 0.15s ease-in-out;
+    }
+  }
+}
+
+.home-content__line {
+  display: block;
+  width: 2px;
+  height: 10.2rem;
+  background-color: #39b54a;
+  position: absolute;
+  right: 7.2rem;
+  bottom: 0;
+}

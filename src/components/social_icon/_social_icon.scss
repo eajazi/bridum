@@ -1,0 +1,17 @@
+.social-icon {
+  @include transition-all;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  // small devices
+  @media (min-width: $screen-md-min) {
+    padding: 1.5rem;
+  }
+
+  // small devices
+  @media (min-width: $screen-lg-min) {
+    padding: 2rem;
+  }
+}

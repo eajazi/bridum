@@ -1,0 +1,6 @@
+.icon-banana {
+  @include transition-all;
+  &:hover {
+    transform: scale(1.1);
+  }
+}

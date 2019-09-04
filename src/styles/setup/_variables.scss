@@ -1,0 +1,33 @@
+// general colors
+$white: #ffffff;
+
+// theme colors
+$colorPrimary: #1a237e;
+$colorPrimaryDark: #000051;
+$colorPrimaryLight: #534bae;
+$colorAccent: #2980b9;
+
+// text Colors Dark Theme
+$colorBgroundGrayDark: #212121;
+$colorBgroundGrayLight: #424242;
+
+$colorTextLightPrimary: #ffffff;
+$colorTextLightSecondary: #fafafa;
+
+$colorTextDarkPrimary: #212121;
+$colorTextDarkSecondary: #757575;
+
+$colorDivider: #bdbdbd;
+
+$nav-background-color: $white;
+$nav-brand-color: $colorTextDarkSecondary;
+$nav-toggle-color: $colorTextDarkSecondary;
+
+// nav shrink colors
+$nav-li-color: $colorTextDarkSecondary;
+$nav-li-color-hover: $colorTextDarkSecondary;
+$nav-li-color-active: $colorAccent;
+
+// scroll
+$scroll-color: #212121;
+$scroll-color-active: $colorAccent;

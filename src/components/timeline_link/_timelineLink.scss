@@ -1,0 +1,107 @@
+.timeline-link-root {
+  li {
+    position: relative;
+    transition: all 0.3s ease-out;
+    margin-bottom: 1vh;
+
+    &:after {
+      content: '';
+      display: block;
+      border-left: 2px solid $colorDivider;
+      border-top: 2px solid $colorDivider;
+      height: 100vh;
+      width: 20px;
+      position: absolute;
+      left: -30px;
+      top: 15px;
+    }
+
+    .counter {
+      color: $colorTextDarkSecondary;
+      font-size: 1rem;
+      transition: all 0.15s ease-out;
+    }
+
+    .title {
+      color: $colorTextDarkPrimary;
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      font-weight: $font-weight-regular;
+      margin: 0 0 0.25em;
+      width: 300px;
+      height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: height 0.3s ease-out, opacity 0.2s ease-out;
+    }
+    .body {
+      color: $colorTextDarkSecondary;
+      font-weight: $font-weight-light;
+      font-size: 1rem;
+      width: 300px;
+      height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: height 0.3s ease-out, opacity 0.2s ease-out;
+    }
+
+    a {
+      cursor: pointer;
+      display: block;
+      padding: 0;
+      color: $colorTextDarkPrimary;
+      transition: all 0.15s ease-out;
+
+      &:hover {
+        color: $colorTextDarkPrimary;
+        background-color: transparent;
+        padding-left: 1em;
+      }
+      &:focus {
+        background-color: transparent;
+      }
+
+      &.active {
+        pointer-events: none;
+        padding-left: 1em;
+
+        &:after {
+          width: 35px;
+          height: 400px;
+          top: 35px;
+        }
+
+        .counter {
+          color: $colorTextDarkPrimary;
+          font-size: 2.5rem;
+        }
+        .title {
+          height: 3vh;
+          opacity: 1;
+          overflow: visible;
+        }
+        .body {
+          height: 2vh;
+          margin-bottom: 6vh;
+          opacity: 1;
+          overflow: visible;
+        }
+      }
+    }
+
+    // medium devices
+    @media (min-width: $screen-md-min) {
+      .counter {
+        font-size: 1.5rem;
+      }
+
+      .title {
+        font-size: 1.8rem;
+        width: 600px;
+      }
+      .body {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}

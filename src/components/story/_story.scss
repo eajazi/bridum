@@ -1,0 +1,69 @@
+// story
+.story-container {
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  padding-top: 30vh;
+  padding-bottom: 30vh;
+  height: 100vh;
+  width: 100%;
+
+  &::after {
+    background-color: $white;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+  }
+  padding-top: 5rem;
+  //padding-top: 20vh;
+
+  padding-bottom: 5rem;
+  //padding-bottom: 20vh;
+
+  .story-image {
+    width: 100%;
+  }
+
+  .story-header {
+    h6 {
+      text-transform: uppercase;
+      letter-spacing: 0.5rem;
+    }
+
+    h2 {
+      text-transform: uppercase;
+      margin-top: 1rem;
+    }
+  }
+
+  .story-content {
+    margin-top: 3rem;
+    text-align: center;
+
+    h5 {
+      margin-top: 2rem;
+      font-size: 1rem;
+      text-align: end;
+    }
+
+    p {
+      margin-top: 2rem;
+      font-size: 1rem;
+
+      span {
+        font-size: 2.5rem;
+        margin-left: 0.5rem;
+        color: $colorTextDarkPrimary;
+        text-transform: uppercase;
+        font-family: $font-family-dosis;
+        font-weight: $font-weight-semibold;
+      }
+    }
+  }
+}
